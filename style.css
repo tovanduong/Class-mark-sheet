@@ -1,0 +1,116 @@
+body{
+
+    font-family: 'Roboto', sans-serif;
+    background-color:#a88e7d ;
+    background-size: 100% auto;
+
+    background-repeat: no-repeat;
+}
+.inputdata {
+    display: flex;
+    justify-content: center;
+}
+.inputdata h1{
+    text-align: center;
+    margin: 20px 0px 40px 0px;
+}
+.inputdata p{
+    display: flex;
+    padding: 0px;
+}
+.inputdata p label{
+    display: flex;
+    min-width: 100px;
+    font-size: 20px;
+    height: 100%;
+    align-items: center;
+}
+.inputdata:nth-child(odd){
+    margin-left: 20px;
+}
+.inputdata p input{
+    flex: 1;
+    margin-right: 30px;
+    height: 40px;
+    border-radius: 10px;
+}
+.inputdata button{
+    max-width: 200px;
+    height: 50px;
+    margin-top: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.8);
+
+}
+#markOfTable{
+    width: 100%;
+    text-align: center;
+    border: 2px solid black;
+    border-collapse: collapse;
+    background-color: white;
+}
+tr:first-child{
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-weight: 300;
+}
+th{
+    border: 1px solid black;
+    width: 14%;
+}
+.eventbtn{    
+    margin: auto;
+    width: 40%;
+}
+.eventbtn button{
+    margin-top: 20px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    font-size: 14px;
+}
+button:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+}
+.light-box{
+    display: none;
+    position: absolute;
+    top: 250px;
+    left: 35%;
+    height: 350px;
+    width: 30%;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;  
+    z-index: 11;
+}
+.light-box p{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+    font-size: 1.6em;
+}
+.background-box{
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0);
+    z-index: 10;
+}
+.close{
+    float: right;
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    text-align: center;
+}
+.close:hover{
+    cursor: pointer;
+}
