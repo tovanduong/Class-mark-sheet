@@ -15,10 +15,14 @@
     <form action="">
     <div class="row inputdata">
             <H1 class="col-sm-12">Class Marksheet</H1>
-            <p class="col-sm-6"><label for="math">Họ Tên</label><input type="text" name="name" required id="name"></p>
-            <p class="col-sm-6"><label for="math">Điểm Toán</label><input type="number" name="math" min="1" max="10" required id="math"></p>
-            <p class="col-sm-6"><label for="physics">Điểm Lý</label><input type="number" name="physics" min="1" max="10" required id="physics"></p>
-            <p class="col-sm-6"><label for="chemical">Điểm Hoá</label><input type="number" name="chemical" min="1" max="10" required id="chemical"></p>
+            <p class="col-sm-8"><label for="math">Họ Tên</label><input type="text" name="name" id="name"></p>
+            <p id="validate-name" class="validate"></p>
+            <p class="col-sm-8"><label for="math">Điểm Toán</label><input type="text" name="math" min="1" max="10" id="math"></p>
+            <p id="validate-math" class="validate"></p>
+            <p class="col-sm-8"><label for="physics">Điểm Lý</label><input type="text" name="physics" min="1" max="10" id="physics"></p>
+            <p id="validate-physics" class="validate"></p>
+            <p class="col-sm-8" ><label for="chemical">Điểm Hoá</label><input type="text" name="chemical" min="1" max="10" id="chemical"></p>
+            <p id="validate-chemical" class="validate"></p>
             <button type='submit' id="btnInput">Nhập</button>
         </div>
     </form>

@@ -1,41 +1,69 @@
-function login () {
-    var Conf = confirm('Để nhập và lấy dữ liệu bảng điểm, bạn phải khai báo');
-    while(Conf != true){
-        var Conf = confirm('Để nhập và lấy dữ liệu bảng điểm, bạn phải khai báo');
-    }
-    var user = prompt('Hãy nhập mã học sinh hoặc mã giáo viên:');    
-    while (user = "" || user.length < 6) {
-        user = prompt('Hãy nhập lại mã học sinh hoặc mã giáo viên (độ dài phải hơn 6):');
-    }
-}
-login();
+// function login () {
+//     var Conf = confirm('Để nhập và lấy dữ liệu bảng điểm, bạn phải khai báo');
+//     while(Conf != true){
+//         var Conf = confirm('Để nhập và lấy dữ liệu bảng điểm, bạn phải khai báo');
+//     }
+//     var user = prompt('Hãy nhập mã học sinh hoặc mã giáo viên:');    
+//     while (user = "" || user.length < 6) {
+//         user = prompt('Hãy nhập lại mã học sinh hoặc mã giáo viên (độ dài phải hơn 6):');
+//     }
+// }
+// login();
 var list = [];
 var dem= 0;
 $(document).ready(function(){
-    $("#btnInput").click(function(){
+    $("#btnInput").click(function(e){
+        e.preventDefault();
         dem++;
         var stt = dem;
         var name1 = $("input[name='name']").val();
         var math1 = $("input[name='math']").val();
         var physic1 = $("input[name='physics']").val();
         var chemystry1 = $("input[name='chemical']").val();
-        testScore = {
-            id: dem,
-            name: name1,
-            math: math1,
-            physical: physic1,
-            chemistry: chemystry1,
-            dtb: "?",
-            xl: "?"
-        };
-        list.push(testScore);
-        $('#markOfTable tr:last').after(`<tr class="sd"><td>${stt}</td><td>${name1}</td><td>${math1}</td>
-        <td>${physic1}</td><td>${chemystry1}</td><td>?</td><td>?</td></tr>`);
-        $('td').css('border','1px solid black');
-        $("input[name='name']").val("");
-        $("input[name='math']").val("");
-        $("input[name='physics']").val("");
-        $("input[name='chemical']").val("");
+         if(name1 == '') {
+            $("#validate-name").text("yêu cầu nhập");
+        }else{
+            $("#validate-name").text("");
+        }
+        if(math1 == ''){
+            $("#validate-math").text("yêu cầu nhập");
+        }else{
+            $("#validate-math").text("");
+        }
+        if(physic1 == ''){
+            $("#validate-physics").text("yêu cầu nhập");
+        }else{
+            $("#validate-physics").text("");
+        }
+        if(chemystry1 == ''){
+            $("#validate-chemical").text("yêu cầu nhập");
+        }else{
+            $("#validate-chemical").text("");
+        }if(name1 !== '' && math1 !== '' && physic1 !== '' && chemystry1 !== ''){
+            testScore = {
+                id: dem,
+                name: name1,
+                math: math1,
+                physical: physic1,
+                chemistry: chemystry1,
+                dtb: "?",
+                xl: "?"
+            };
+    
+            list.push(testScore);
+            $('#markOfTable tr:last').after(`<tr class="sd"><td>${stt}</td><td>${name1}</td><td>${math1}</td>
+            <td>${physic1}</td><td>${chemystry1}</td><td>?</td><td>?</td></tr>`);
+            $('td').css('border','1px solid black');
+            $("input[name='name']").val("");
+            $("input[name='math']").val("");
+            $("input[name='physics']").val("");
+            $("input[name='chemical']").val("");
+            $("#validate-name").text("");
+            $("#validate-math").text("");
+            $("#validate-physics").text("");
+            $("#validate-chemical").text("");
+        }
+
     });
     console.log(list)
     $("#avg").click(function(){

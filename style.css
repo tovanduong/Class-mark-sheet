@@ -1,7 +1,7 @@
 body{
 
     font-family: 'Roboto', sans-serif;
-    background-color:#a88e7d ;
+    background-color:white ;
     background-size: 100% auto;
 
     background-repeat: no-repeat;
@@ -39,8 +39,12 @@ body{
     height: 50px;
     margin-top: 30px;
     background-color: rgba(0, 0, 0, 0.5);
-    background-color: rgba(255, 255, 255, 0.8);
+    color: #FFF;
 
+}
+.validate{
+    margin-left: 850px;
+    color: red;
 }
 #markOfTable{
     width: 100%;
@@ -65,13 +69,14 @@ th{
 .eventbtn button{
     margin-top: 20px;
     height: 50px;
-    background-color: rgba(255, 255, 255, 0.8);
-    color: black;
+    background-color: #333;
+    color: white;
     font-size: 14px;
 }
 button:hover{
-    background-color: rgba(255, 255, 255, 0.8);
-    font-size: 16px;
+    background-color: #000;
+
+    color: white;
 }
 .light-box{
     display: none;
